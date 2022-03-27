@@ -119,83 +119,17 @@
 // var sampleArray = [1, 2, 4, 6, 3, 5, 7, 3, 2, 4, 6, 2]
 // evenAndOdds(sampleArray)
 
-// function makeChange(amount){
-//   var optimal = {
-//     "quarters" : 0,
-//     "dimes" : 0,
-//     "nickels" : 0,
-//     "pennies" : 0
-//   }
-//   optimal["quarters"] = Math.floor(amount/25)
-//   amount %= 25
-//   optimal["dimes"] = Math.floor(amount/10)
-//   amount %= 10
-//   optimal["nickels"] = Math.floor(amount/5)
-//   amount %= 5
-//   optimal["pennies"] = amount
-//   return optimal
-// }
 
-// console.log(makeChange(123))
-
-// function pushFront(arr, val){
-//   for(var i = arr.length -1; i >= 0; i--){
-//     arr[i + 1] = arr[i]
-//   }
-//   arr[0] = val
-//   console.log(arr)
-// }
-// pushFront([1, 2, 3, 4, 5], 7)
-
-// function insterAt(arr, val, index){
-//   if(index < 0 | index > arr.length -1){
-//     console.log("Index is not within array range.")
-//     return null
-//   }
-//   for(var i = arr.length -1; i >= 0; i--){
-//     if(i == index){
-//       arr[i +1] = arr[i]
-//       arr[i] = val
-//       return arr
-//     }
-//     else {
-//       arr[i + 1] = arr[i]
-//     }
-//   }
-// }
-
-// console.log(insterAt([1, 2, 3, 4], 5, 3))
-
-// function rotateArray(arr){
-//   var temp = 0
-//   var backIndex = arr.length -1
-//   for(var i = 0; i <= Math.floor(arr.length/2) -1; i++){
-//     temp = arr[i]
-//     arr[i] = arr[backIndex]
-//     arr[backIndex] = temp
-//     backIndex--
-//     console.log(arr)
-//   }
-// }
-
-// rotateArray([1,2,3,4,5])
-
-function shiftArray(arr, val){
-  if(arr.length == val){
-    console.log(arr)
-    return arr
+function pushFront(arr, val){
+  for(var i = arr.length -1; i >= 0; i--){
+    arr[i + 1] = arr[i]
   }
-  if(val > arr.length){
-    val %= arr.length
-  }
-  for(var i = 1; i <=val; i++){
-    var temp = arr[arr.length -1]
-    for(var j = arr.length -1; j >= 0; j--){
-      arr[j] = arr[j -1]
-    }
-    arr[0] = temp
-    console.log(arr)
-  }
+  arr[0] = val
+  console.log(arr)
 }
+pushFront([1, 2, 3, 4, 5], 7)
 
-shiftArray([1,2,3,4,5,6], 2)
+
+
+
+
