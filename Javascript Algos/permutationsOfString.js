@@ -8,16 +8,17 @@ function findPermutations(string){
   for(var i = 0; i < string.length; i++){
     var char = string[i]
 
-    // if(string.indexOf(char) != i)
-    // continue
+    //use this to exclude any repititions
+    if(string.indexOf(char) != i)
+    continue
 
     var remainingChars = string.slice(0, i) + string.slice(i + 1, string.length)
     for(var permutation of findPermutations(remainingChars)){
       permutationsArray.push(char + permutation)
     }
   }
-  console.log(permutationsArray)
+  // console.log(permutationsArray)
   return permutationsArray
 }
 
-findPermutations("cat")
+console.log(findPermutations("food"))
