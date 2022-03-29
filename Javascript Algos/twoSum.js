@@ -1,3 +1,12 @@
+/**
+ * @param {number[]} 
+ * @param {number[]} arr
+ * @param {number[]} nums
+ * @param {number} target
+ * @param {number} sum
+ * @return {number[]}
+ */
+
 //Brute force method
 //Time complexity O(n^2)
 
