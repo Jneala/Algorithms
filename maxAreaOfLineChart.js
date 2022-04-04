@@ -48,11 +48,11 @@ function maxArea(heightsArray){
   //Set while loop until left and right meet.
   while(left < right) {
     //Declare variable for the shorter vertical line
-    let shorterLine = Math.min(height[left], height[right]);
+    let shorterLine = Math.min(heightsArray[left], heightsArray[right]);
     //Check maximum area
     maxiumumArea = Math.max(maxiumumArea, shorterLine * (right - left));
     //Move pointers based on least height, least height moves inward
-    if(height[left] < height[right]) {
+    if(heightsArray[left] < heightsArray[right]) {
       left++;
     }else{
       right--;
